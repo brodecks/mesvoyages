@@ -60,4 +60,14 @@ class VisiteRepository extends ServiceEntityRepository
         $this->getEntityManager()->remove($visite);
         $this->getEntityManager()->flush();
     }
+    
+    /**
+     * ajout ou modif d'une visite
+     * @param Visite $visite
+     * @return void
+     */
+    public function add(Visite $visite):void{
+        $this->getEntityManager()->persist($visite);
+        $this->getEntityManager()->flush();
+    }
 }

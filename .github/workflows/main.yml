@@ -10,7 +10,7 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: mesvoyages.worldlite.ca/www/mesvoyages/public/
+        server: mesvoyages.worldlite.ca
         server-dir: /public_html/mesvoyages/public/
-        username: compteftp@mesvoyages.worldlite.ca
+        username: compteftp
         password: ${{ secrets.ftp_password }}

@@ -11,6 +11,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: https://mesvoyages.worldlite.ca/www/mesvoyages/public/
-        server-dir: /public_html/mesvoyages/public
+        server-dir: /public_html/mesvoyages/public/
         username: compteftp@mesvoyages.worldlite.ca
         password: ${{ secrets.ftp_password }}

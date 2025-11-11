@@ -12,5 +12,5 @@ jobs:
       with:
         server: mesvoyages.worldlite.ca
         server-dir: /public_html/mesvoyages/public/
-        username: compteftp
+        username: compteftp@mesvoyages.worldlite.ca
         password: ${{ secrets.ftp_password }}

@@ -1,0 +1,6 @@
+projectKey=mesvoyages
+serverUrl=http://localhost:9000
+serverVersion=10.5.1.90531
+dashboardUrl=http://localhost:9000/dashboard?id=mesvoyages
+ceTaskId=db43172a-3b59-4ad4-89d7-9e4c001d82c3
+ceTaskUrl=http://localhost:9000/api/ce/task?id=db43172a-3b59-4ad4-89d7-9e4c001d82c3

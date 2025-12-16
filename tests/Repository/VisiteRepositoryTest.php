@@ -17,6 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
  * @author rapha
  */
 class VisiteRepositoryTest extends KernelTestCase{
+    private $newyork = "New York";
     public function recupRepository(): VisiteRepository{
         self::bootKernel();
         $repository = self::getContainer()->get(VisiteRepository::class);
@@ -31,7 +32,7 @@ class VisiteRepositoryTest extends KernelTestCase{
     
     public function newVisite(): Visite{
         $visite = (new Visite())
-                ->setVille("New York")
+                ->setVille($this->newyork)
                 ->setPays("USA")
                 ->setDatecreation(new \DateTime("now"));
         return $visite;
@@ -58,9 +59,9 @@ class VisiteRepositoryTest extends KernelTestCase{
         $repository = $this->recupRepository();
         $visite = $this->newVisite();
         $repository->add($visite, true);
-        $visites = $repository->findByEqualValue("ville", "New York");
+        $visites = $repository->findByEqualValue("ville", $this->newyork);
         $nbVisites = count($visites);
         $this->assertEquals(1, $nbVisites);
-        $this->assertEquals("New York", $visites[0]->getVille());
+        $this->assertEquals($this->newyork, $visites[0]->getVille());
     }
 }

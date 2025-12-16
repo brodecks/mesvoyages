@@ -209,7 +209,7 @@ class Visite
     public function setImageFile(?File $imageFile): void {
         $this->imageFile = $imageFile;
         if(null !== $imageFile){
-            $this->updateAt = new DateTimeImmutable();
+            $this->updatedAt = new DateTimeImmutable();
         }
     }
 
